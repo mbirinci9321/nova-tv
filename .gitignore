@@ -1,0 +1,22 @@
+node_modules/
+dist/
+dist-webos/
+*.ipk
+
+# Private configuration and local output
+.env
+.env.*
+!.env.example
+*.m3u
+*.m3u8
+*.pem
+*.key
+*.log
+/releases/
+/*-preview.png
+/tv-*.png
+/playwright-report/
+/test-results/
+# One-off migration helpers
+/scripts/refine.mjs
+/scripts/update-player.mjs

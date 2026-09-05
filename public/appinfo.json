@@ -1,0 +1,11 @@
+{
+  "id": "com.mbirinci.tv",
+  "version": "1.6.3",
+  "vendor": "mirascode.com.tr",
+  "type": "web",
+  "main": "index.html",
+  "title": "NOVA TV",
+  "icon": "icon.png",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true
+}

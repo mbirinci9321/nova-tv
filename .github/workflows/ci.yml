@@ -1,0 +1,31 @@
+name: Build and test
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install msedge
+      - run: npm run build
+      - run: npm run build:webos
+      - name: Start local test server
+        shell: pwsh
+        run: |
+          Start-Process -FilePath node -ArgumentList 'node_modules/vite/bin/vite.js','--host','127.0.0.1' -WindowStyle Hidden
+          for ($attempt = 0; $attempt -lt 30; $attempt++) {
+            try { Invoke-WebRequest http://localhost:5173/ -ErrorAction Stop | Out-Null; exit 0 } catch { Start-Sleep -Seconds 1 }
+          }
+          throw 'Test server did not start'
+      - run: npm test
+      - run: npm run test:series
+      - run: npm run test:audio
