@@ -1,7 +1,7 @@
 {
   "name": "mbirinci-tv",
   "version": "1.6.3",
-  "description": "NOVA TV: Turkish IPTV player for LG webOS with Magic Remote, M3U/Xtream and audio/subtitle selection",
+  "description": "LG webOS için Türkçe NOVA TV IPTV uygulaması; M3U/Xtream, Magic Remote, film-dizi, ses ve altyazı seçimi",
   "scripts": {
     "test": "node scripts/check.mjs",
     "dev": "vite --host 0.0.0.0",

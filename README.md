@@ -70,4 +70,4 @@ TV boyutunda kategori seçimi, içerik türleri, kart yazıları ve Tümünü g�
 
 Node.js 22.12+ ve npm gereklidir. `npm ci` ile bağımlılıkları kurun. Testler Microsoft Edge kullanır (`npx playwright install msedge`). Önce ayrı terminalde `npm run dev` başlatın, ardından `npm test` ve `npm run test:series` çalıştırın. `npm run build:webos` sonrasında `npm run test:audio` ile diskten açılış ve ses adaptörlerini doğrulayın. IPK üretmek için LG webOS CLI ayrıca gereklidir.
 
-Kaynak kodda yayın hesabı veya cihaz anahtarı bulunmamalıdır. Hesap bilgilerini yalnızca uygulamanın Ayarlar ekranına girin; ekran görüntüleri, M3U listeleri ve derleme çıktıları Git dışında tutulur. Depo özel olarak oluşturulmuştur.
+Kaynak kodda yayın hesabı, portal adresi veya cihaz anahtarı bulunmaz. Ayarlar ekranındaki `demo.example.com`, `demo_kullanici` ve `demo_sifre` değerleri yalnızca alan biçimini gösteren güvenli örneklerdir; çalışan bir yayın hesabı değildir. Gerçek hesap bilgilerini yalnızca uygulamanın Ayarlar ekranına girin; ekran görüntüleri, M3U listeleri ve derleme çıktıları Git dışında tutulur. Depo özel olarak oluşturulmuştur.
